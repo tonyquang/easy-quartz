@@ -4,8 +4,6 @@ A Simple Spring Boot Quartz Library
 ## Guide
 Download realease jar file and add to your project
 
-Above your main class add annotation ***@ComponentScan("com.easyquartz.scheduler.ScheduleService")***
-
 Create class wanna create cron job that implements ***Job*** in org.quartz.Job and implement method ***execute***
 Example:
 ```java
