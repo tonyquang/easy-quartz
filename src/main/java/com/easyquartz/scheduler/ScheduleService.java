@@ -25,9 +25,9 @@ public class ScheduleService {
         }
     }
 
-    public <T extends Job> void schedule(final Class<T> jobClass, final String cronJobExpression) {
-        final JobDetail jobDetail = TimerUtils.buildJobDetail(jobClass, cronJobExpression);
-        final Trigger trigger = TimerUtils.buildTrigger(jobClass, cronJobExpression);
+    public <T extends Job> void schedule(final Class<T> jobClass, final String groupID, final String cronJobExpression) {
+        final JobDetail jobDetail = TimerUtils.buildJobDetail(jobClass, groupID, cronJobExpression);
+        final Trigger trigger = TimerUtils.buildTrigger(jobClass, groupID, cronJobExpression);
 
         try {
             scheduler.scheduleJob(jobDetail, trigger);
