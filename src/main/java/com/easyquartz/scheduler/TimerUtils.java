@@ -24,7 +24,8 @@ public class TimerUtils {
         return TriggerBuilder
                 .newTrigger()
                 .withIdentity(jobClass.getSimpleName())
-                .withSchedule(CronScheduleBuilder.cronSchedule(cronJobExpression).withMisfireHandlingInstructionIgnoreMisfires())
+                .withSchedule(CronScheduleBuilder.cronSchedule(cronJobExpression)
+                .withMisfireHandlingInstructionIgnoreMisfires())
                 .startAt(new Date(System.currentTimeMillis()))
                 .build();
     }
