@@ -49,6 +49,8 @@ spring.quartz.properties.org.quartz.jobStore.driverDelegateClass=org.quartz.impl
 
 spring.quartz.job-store-type=jdbc
 spring.quartz.jdbc.initialize-schema=never
+spring.quartz.properties.org.quartz.scheduler.instanceId=<yourid>
+spring.quartz.properties.org.quartz.scheduler.instanceName=<yourname>
 ```
 I used postgresql if you use the different database you can searching on internet to config that
 
